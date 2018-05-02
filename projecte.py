@@ -223,6 +223,7 @@ while wrong < MAX_WRONG and so_far != word:
 #Afegeix la lletra de la paraula a la llista used
   if guess in word:
     print "Si", guess, "esta en la palabra"
+#Et diu que la lletra esta en la paraula 
     new = ""
     for i in range (len(word)):
       if guess == word[i]:
@@ -230,13 +231,18 @@ while wrong < MAX_WRONG and so_far != word:
       else:
         new +=so_far[i]
     so_far = new
+#Si la lletra es igual a un dels caracters que forma la paraula introduida per el jugador 1.
+#afegeix la lletra a una llista anomenada new.
+#Despres diu que so_far es igual a la llista new,obviament es així perquè so_far es la longitud de la paraula escollida per el jugador1.
   else:
     print "Lo siento", guess, "no esta en la palabra"
     wrong += 1
+#Sino imprimeix per pantalla que la lletra introduïda no esta en la paraula escollida per el jugador1 i incrementa el contador wrong.
 if wrong == MAX_WRONG:
   print "Has perdido"
   print "La palabra era", word
+#si el contador es  igual al numero de imatges que hi han a la llista MAX_WRONG,has perdut i t'imprimeix la paraula que era.
 else:
   print "Has ganado!"
   print "La palabra era", word
-  
+#Sino has guanyat i t'imprimeix la paraula resultant.
